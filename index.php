@@ -19,7 +19,18 @@
         }
         main{
             box-sizing:border-box;
-            padding: 0px 200px;
+            padding: 0px 10px;
+        }
+        section {
+            background-color: #fff;
+            border: 1px solid black;
+            padding: 10px ;
+            overflow-x: scroll;
+        }
+        @media(min-width: 768px){
+            main {
+                padding: 0px 200px;
+            }
         }
     </style>
 </head>
@@ -50,9 +61,21 @@
         
                 $toShow = hash($method, $toConvert);
         
-                echo "<strong>Generated hash ({$method}):</strong> <code>".$toShow.'</code>';
+                echo "<strong>Generated hash ({$method}):</strong>";
+                echo "<section><p>{$toShow}</p></section>";
             }
         ?>
+        <footer>
+            <p>
+                *We don't save the generated string-hash pair like many other websites that offer to generate a hash but then they take it and then they can easily decrypt the hash.
+                <br>
+                <br>
+                 Our script only generates the hash and returns it to you on the screen, you can be sure that your information is safe with us.
+                <br>
+                <br>
+                 You can check it by looking at the script in our <a href="https://github.com/juanmatola/hash-generator">GitHub repository.</a>
+            </p>
+        </footer>
     </main>
 </body>
 </html>
